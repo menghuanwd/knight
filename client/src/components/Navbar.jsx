@@ -1,9 +1,10 @@
 import {useState} from 'react'
 import logo from "../../images/logo.png"
+import logomini from "../../images/icon-192x192.png"
 import {AiOutlineClose, HiMenuAlt4} from "react-icons/all";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 // import {faHouse, faFileChartPie, faFileSignature, faWallet} from "@fortawesome/pro-solid-svg-icons";
-import {faHouse, faUserCircle, faFileSignature, faWallet} from "@fortawesome/pro-regular-svg-icons";
+import {faHouse, faUserCircle, faBars, faWallet} from "@fortawesome/pro-regular-svg-icons";
 
 const NavbarItem = ({title, classProps}) => {
     return (
@@ -26,7 +27,7 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className="w-full flex md:justify-center justify-between items-center p-4 bg-emerald-400">
+            <nav className="w-full flex  justify-between items-center p-4 bg-white">
                 {/*<div className="md:flex[0-5] flex-initial justify-center items-center">*/}
                 {/*    <img src={logo} className="w-10 cursor-pointer"/>*/}
                 {/*</div>*/}
@@ -41,18 +42,21 @@ const Navbar = () => {
 
                 <div>
                     {toggleMenu
-                        ? <AiOutlineClose fontSize={28} className="text-white md:hidden cursor-pointer" onClick={() => setToggleMenu(false)}/>
-                        : <HiMenuAlt4 fontSize={36} className="text-white md:hidden cursor-pointer" onClick={() => setToggleMenu(true)}/>}
+                        ? <AiOutlineClose fontSize={28} className="text-white cursor-pointer" onClick={() => setToggleMenu(false)}/>
+                        :
+                        <div className="flex">
+                            <FontAwesomeIcon className="ml-2" icon={faBars} onClick={() => setToggleMenu(true)}/>
+                            <img className="mx-2 -my-2 w-8 h-8" src={logomini}/>
+                        </div>
+                    }
                     {toggleMenu && (
-                        <ul className="z-10 fixed top-0 left-0 w-[35vw] h-screen shadow-2xl md:hidden list-none
+                        <ul className="z-10 fixed top-0 left-0 w-[240px] h-screen shadow-2xl list-none
                             flex flex-col justify-between rounded-md bg-white text-[#7c7f85]
                         ">
                             <div>
                             <li className="text-xl w-full mx-3 my-5 flex flex-row">
                                 <AiOutlineClose onClick={() => setToggleMenu(false)}/>
-                                {/*<span className="mx-5 -my-1">Simfoni</span>*/}
-                                {/*<span className="mx-5 -my-1">Simfoni</span>*/}
-                                <img className="mx-2 -my-2 w-12 h-12" src={logo}/>
+                                <img className="mx-2 -my-2 w-20 h-12" src={logo}/>
                             </li>
                             {
                                 ['Terminal', 'Analytics', 'BuyDesk', 'Sourceforce', 'Add new'].map((item, index) => (
