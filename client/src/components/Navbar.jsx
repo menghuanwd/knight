@@ -45,8 +45,8 @@ const Navbar = () => {
                         ? <AiOutlineClose fontSize={28} className="text-white cursor-pointer" onClick={() => setToggleMenu(false)}/>
                         :
                         <div className="flex">
-                            <FontAwesomeIcon className="ml-2" icon={faBars} onClick={() => setToggleMenu(true)}/>
-                            <img className="mx-2 -my-2 w-8 h-8" src={logomini}/>
+                            <FontAwesomeIcon className="ml-4" icon={faBars} onClick={() => setToggleMenu(true)}/>
+                            <img className="ml-2 -my-2 w-8 h-8" src={logomini}/>
                         </div>
                     }
                     {toggleMenu && (
