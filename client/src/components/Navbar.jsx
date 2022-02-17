@@ -27,7 +27,7 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className="w-full flex  justify-between items-center p-4 bg-white">
+            <nav className="w-full flex  justify-between items-center h-16 bg-white">
                 {/*<div className="md:flex[0-5] flex-initial justify-center items-center">*/}
                 {/*    <img src={logo} className="w-10 cursor-pointer"/>*/}
                 {/*</div>*/}
@@ -54,9 +54,9 @@ const Navbar = () => {
                             flex flex-col justify-between rounded-md bg-white text-[#7c7f85]
                         ">
                             <div>
-                            <li className="text-xl w-full mx-3 my-5 flex flex-row">
+                            <li className="text-xl w-full mx-4 my-5 flex flex-row">
                                 <AiOutlineClose onClick={() => setToggleMenu(false)}/>
-                                <img className="mx-2 -my-2 w-20 h-12" src={logo}/>
+                                <img className="mx-3 -my-2 w-20 h-10" src={logo}/>
                             </li>
                             {
                                 ['Terminal', 'Analytics', 'BuyDesk', 'Sourceforce', 'Add new'].map((item, index) => (
