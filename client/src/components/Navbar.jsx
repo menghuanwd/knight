@@ -62,10 +62,10 @@ const Navbar = () => {
                                     <img className="mx-3 w-20 h-10" src={logo}/>
                                 </li>
                                 <li className={`cursor-pointer ml-0 my-2 text-lg p-1.5 hover:bg-[#E2F5F4] hover:text-[#076461]`}>
-                                    <FontAwesomeIcon className="ml-2 w-[20px]" icon={faHomeLgAlt}/> <span
-                                    className="ml-2 text-[14px] font-['Montserrat']">
-                                    <Link to="/profile">Terminal</Link>
-                                </span>
+                                    <FontAwesomeIcon className="ml-2 w-[20px]" icon={faHomeLgAlt}/>
+                                    <span className="ml-2 text-[14px] font-['Montserrat']">
+                                        <Link to="/dashboard">Terminal</Link>
+                                    </span>
                                 </li>
                                 <li className={`cursor-pointer ml-0 my-2 text-lg p-1.5 hover:bg-[#E2F5F4] hover:text-[#076461]`}>
                                     <FontAwesomeIcon className="ml-2 w-[20px] " icon={faFileInvoiceDollar}/> <span
@@ -91,12 +91,12 @@ const Navbar = () => {
 
                             <div>
                                 <li className={`cursor-pointer ml-0 text-lg border-y-2 p-1.5 hover:bg-[#E2F5F4] hover:text-[#076461] `}>
-                                    <FontAwesomeIcon className="ml-2 w-[20px]" icon={faUserCircle}/> <span
-                                    className="ml-2 text-[14px] font-['Montserrat']">Profile</span>
+                                    <FontAwesomeIcon className="ml-2 w-[20px]" icon={faUserCircle}/>
+                                    <Link to="/profile" className="ml-2 text-[14px] font-['Montserrat'] ">User Profile</Link>
                                 </li>
                                 <li className={`cursor-pointer ml-0 text-lg border-y-1 p-1.5 hover:bg-[#E2F5F4] hover:text-[#076461] `}>
-                                    <FontAwesomeIcon className="ml-2 w-[20px]" icon={faSignOutAlt}/> <span
-                                    className="ml-2 text-[14px] font-['Montserrat'] ">Log out</span>
+                                    <FontAwesomeIcon className="ml-2 w-[20px]" icon={faSignOutAlt}/>
+                                    <Link to="/login" className="ml-2 text-[14px] font-['Montserrat'] ">Log out</Link>
                                 </li>
                             </div>
                         </ul>
