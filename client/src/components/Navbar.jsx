@@ -69,7 +69,7 @@ const Navbar = () => {
                                 </li>
                                 <li className={`cursor-pointer ml-0 my-2 text-lg p-1.5 hover:bg-[#E2F5F4] hover:text-[#076461]`}>
                                     <FontAwesomeIcon className="ml-2 w-[20px] " icon={faFileInvoiceDollar}/> <span
-                                    className="ml-2.5  text-[14px] font-['Montserrat']">eSouring</span>
+                                    className="ml-2.5  text-[14px] font-['Montserrat']" onClick={() => this.props.history.push('/profile')}>eSouring</span>
                                 </li>
                                 <li className={`cursor-pointer ml-0 my-2 text-lg p-1.5 hover:bg-[#E2F5F4] hover:text-[#076461]`}>
                                     <FontAwesomeIcon className="ml-2 w-[20px]" icon={faAnalytics}/> <span

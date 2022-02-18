@@ -1,8 +1,8 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import {BrowserRouter, Switch, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import About from './pages/About';
+import Dashboard from './pages/Dashboard';
+import Profile from './pages/Profile';
 
 function App() {
     return (
@@ -10,8 +10,8 @@ function App() {
             <div>
                 <Navbar />
                 <Switch>
-                    <Route path="/" component={Home} exact />
-                    <Route path="/about" component={About} exact />
+                    <Route path="/" component={Dashboard} exact />
+                    <Route path="/profile" component={Profile} exact />
                 </Switch>
             </div>
         </BrowserRouter>
