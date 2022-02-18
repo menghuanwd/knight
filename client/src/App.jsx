@@ -1,5 +1,5 @@
 import  { Navbar, Welcome, Footer, Services, Transactions } from './components'
-
+import {useState} from 'react'
 import { Select, Button, Input, Tooltip, Modal, Form, Typography, Drawer, List } from 'antd';
 import { ConfigProvider, DatePicker, message } from 'antd';
 
@@ -36,7 +36,7 @@ const App = () => {
             </Form>
 
 
-            <ConfigProvider locale={zhCN}>
+            <ConfigProvider>
                 <div style={{ width: 400, margin: '100px auto' }}>
                     <DatePicker onChange={handleChange} />
                     <div style={{ marginTop: 16 }}>
