@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import {Link} from 'react-router-dom';
 import logo from "../../images/logo.png"
 import logomini from "../../images/icon-192x192.png"
 import {AiOutlineClose, HiMenuAlt4} from "react-icons/all";
@@ -39,18 +40,6 @@ const Navbar = () => {
     return (
         <>
             <nav className="w-full flex  justify-between items-center h-16 bg-white">
-                {/*<div className="md:flex[0-5] flex-initial justify-center items-center">*/}
-                {/*    <img src={logo} className="w-10 cursor-pointer"/>*/}
-                {/*</div>*/}
-                {/*<ul className="text-white md:flex hidden flex-row justify-between items-center flex-initial">*/}
-                {/*    {*/}
-                {/*        ['Market', 'Exchange', 'Tutorials', 'Wallets'].map((item, index) => (*/}
-                {/*            <NavbarItem key={item + index} title={item} classProps="my-2 text-lg"/>*/}
-                {/*        ))*/}
-                {/*    }*/}
-                {/*    <li className="bg-[#2952e3] px-6 py-2 mx-4 rounded-full cursor-pointer hover:bg-[#2546bd]">Login</li>*/}
-                {/*</ul>*/}
-
                 <div>
                     {toggleMenu
                         ? <AiOutlineClose fontSize={28} className="text-white cursor-pointer"
@@ -74,7 +63,9 @@ const Navbar = () => {
                                 </li>
                                 <li className={`cursor-pointer ml-0 my-2 text-lg p-1.5 hover:bg-[#E2F5F4] hover:text-[#076461]`}>
                                     <FontAwesomeIcon className="ml-2 w-[20px]" icon={faHomeLgAlt}/> <span
-                                    className="ml-2 text-[14px] font-['Montserrat']">Terminal</span>
+                                    className="ml-2 text-[14px] font-['Montserrat']">
+                                    <Link to="/profile">Terminal</Link>
+                                </span>
                                 </li>
                                 <li className={`cursor-pointer ml-0 my-2 text-lg p-1.5 hover:bg-[#E2F5F4] hover:text-[#076461]`}>
                                     <FontAwesomeIcon className="ml-2 w-[20px] " icon={faFileInvoiceDollar}/> <span
